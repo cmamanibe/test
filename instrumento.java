@@ -1,7 +1,7 @@
-import java.util.*
-public class Instrumento {
+import java.util.*;
+ class Instrumento {
     public void tocar() {
-        System.out.println("Instrumento.tocar()"");
+        System.out.println("Instrumento.tocar()");
     }
     public String tipo(){
         return "iInstrumento";
@@ -14,16 +14,16 @@ public class Instrumento {
 
 class Guitarra extends Instrumento{
     public void tocar(){
-        system.out.println("Guitarra.tocar()")
+        System.out.println("Guitarra.tocar()");
     }
     public String tipo(){ return "Guitarra";}
     public void afinar(){}
 }
 class Piano extends Instrumento{
     public void tocar(){
-        system.out.println("Piano.tocar()");}
+        System.out.println("Piano.tocar()");}
         
-        public string tipo(){return "Pano";}
+        public String tipo(){return "Pano";}
         public void afinar(){}
     }
     class Saxofon extends Instrumento{
