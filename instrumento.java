@@ -1,5 +1,5 @@
 import java.util.*
-public class instrumento {
+public class Instrumento {
     public void tocar() {
         System.out.println("Instrumento.tocar()"");
     }
@@ -26,4 +26,10 @@ class Piano extends Instrumento{
         public string tipo(){return "Pano";}
         public void afinar(){}
     }
-}
+    class Saxofon extends Instrumento{
+        public void tocar(){
+            System.out.println("Saxofon.tocar()");
+        }
+        public String tipo(){return "Saxofon";}
+        public void afinar(){}
+    }
