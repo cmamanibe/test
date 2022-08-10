@@ -33,3 +33,22 @@ class Piano extends Instrumento{
         public String tipo(){return "Saxofon";}
         public void afinar(){}
     }
+    // UN TIPO DEE GUITARRA
+    class Guzla extends Guitarra{
+public void tocar(){
+    System.out.println("Guzla.tocar()");
+}
+public void afinar(){
+    System.out.println("Guzla.afinar()");
+}
+    }
+   // UN TIPO DEE GUITARRA
+        class Ukelele extends Guitarra{
+            public void tocar(){
+                System.out.println("Ukelele.tocar()");
+            }
+            public String tipo(){
+                return "Ukelele";
+            }
+                }
+                
