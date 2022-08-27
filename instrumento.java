@@ -35,12 +35,12 @@ class Piano extends Instrumento{
     }
     // UN TIPO DEE GUITARRA
     class Guzla extends Guitarra{
-public void tocar(){
+        public void tocar(){
     System.out.println("Guzla.tocar()");
-}
-public void afinar(){
+    }
+    public void afinar(){
     System.out.println("Guzla.afinar()");
-}
+    }
     }
    // UN TIPO DEE GUITARRA
         class Ukelele extends Guitarra{
@@ -51,26 +51,3 @@ public void afinar(){
                 return "Ukelele";
             }
                 }
-
-public class Musica{
-    //No importa el tipo d instrumento,
-    // seguira funcionando debido a polimorfismo:
-    static void afinar(Instrumento i){
-        // ...
-        i.tocar();
-    }
-    static void afinarTodo( Instrumento[] e){
-        for (int i=0;i<e.length;i++)
-        afinar(e[i]);
-    }
-    public static void main(String[] args){
-        Instrumento[] orquesta=new Instrumento[5];
-        int i=0;
-        //Up-casting al asignarse el Arreglo
-        orquesta[i++]=new Guitarra();
-        orquesta[i++]=new Piano();
-        orquesta[i++]=new Saxofon();
-        orquesta[i++]=new Guzla();
-        orquesta[i++]=new Ukelele();
-    }
-}//clase musica
