@@ -1,4 +1,4 @@
-public class RunnableAlfaBeta implements Runnable{
+/*public class RunnableAlfaBeta implements Runnable{
     int cantidad;
     public RunnableAlfaBeta(int laCantidad){
         this.cantidad = laCantidad;
@@ -10,4 +10,4 @@ for(int i=0;i<cantidad;i++){
     }
    
        
-}
+}*/

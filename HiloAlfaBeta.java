@@ -1,4 +1,4 @@
-public class HiloAlfaBeta extends Thread{
+/*public class HiloAlfaBeta extends Thread{
     int cantidad;
     public HiloAlfaBeta(String nombre, int laCantidad){
         super(nombre);
@@ -8,7 +8,7 @@ public class HiloAlfaBeta extends Thread{
         for (int i=0; i<this.cantidad;i++){
             System.out.println(this.getName()+" en ejecución");
             System.out.println(Thread.currentThread()+"------"+
-            Thread.currentThread().getName());
-        }
+          Thread.currentThread().getName());
+      }
     }
-}
+}*/

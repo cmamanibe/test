@@ -1,4 +1,4 @@
-public class TestAlfaBeta2 {
+/*public class TestAlfaBeta2 {
     public static void main(String[] args){
         RunnableAlfaBeta alfaBetaRunnable_1= new RunnableAlfaBeta(4);
         RunnableAlfaBeta alfaBetaRunnable_2= new RunnableAlfaBeta(3);
@@ -11,4 +11,4 @@ public class TestAlfaBeta2 {
 
         System.out.println("Estoy saliendo del main");
     }
-}
+}*/
