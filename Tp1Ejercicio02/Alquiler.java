@@ -7,16 +7,18 @@ public class Alquiler {
     public int numero_Posicion;
     public Cliente dCliente;
     public Avion dAvion;
+    public double costoAlquiler;
    
     public Alquiler(){
 
     }
-    public Alquiler(long tiempo,int posicion,Cliente elCliente,Avion elAvion){
+    public Alquiler(long tiempo,int posicion,Cliente elCliente,Avion elAvion, double costo){
+
         this.f_Fin.setTime(this.f_Inicio.getTime()+tiempo);
         this.numero_Posicion=posicion;
         this.dCliente=elCliente;
         this.dAvion=elAvion;
-
+        this.costoAlquiler=costo;
     }
 }
 
