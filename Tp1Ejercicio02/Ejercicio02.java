@@ -28,5 +28,8 @@ public class Ejercicio02 {
         System.out.println("Inicio del alquiler: "+ aero.alquileres[1].f_Inicio);
         System.out.println("Fin del alquiler: "+ aero.alquileres[1].f_Fin);
         System.out.println("Matricula Avion: "+ aero.alquileres[1].dAvion.Matricula);
+        System.out.println("Cliente: "+ aero.alquileres[1].dCliente.getName());
+        System.out.println("DNI: "+ aero.alquileres[1].dCliente.getDNI());
+        System.out.println("Posicion: "+ aero.alquileres[1].numero_Posicion);
     }
 }

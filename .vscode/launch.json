@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "PingPong",
+            "request": "launch",
+            "mainClass": "PingPong",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "PruebaExcep",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.PruebaExcep",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio7d",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.Ejercicio7d",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio7c",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.Ejercicio7c",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio7b",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.Ejercicio7b",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio7a",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.Ejercicio7a",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "TestMiHilo",
+            "request": "launch",
+            "mainClass": "Hilo.TestMiHilo",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio6",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.Ejercicio6",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Ejercico5",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.Ejercico5",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "ejercicio4",
+            "request": "launch",
+            "mainClass": "TP1Excepciones.ejercicio4",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio02",
+            "request": "launch",
+            "mainClass": "Tp1Ejercicio02.Ejercicio02",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "clrscr",
+            "request": "launch",
+            "mainClass": "clrscr",
+            "projectName": "test_f203a35a"
+        }
+    ]
+}
