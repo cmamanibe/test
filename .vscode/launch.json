@@ -8,6 +8,20 @@
             "type": "java",
             "name": "PingPong",
             "request": "launch",
+            "mainClass": "Hilo.PingPong",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "testeoRecurso",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio1.testeoRecurso",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "PingPong",
+            "request": "launch",
             "mainClass": "PingPong",
             "projectName": "test_f203a35a"
         },
