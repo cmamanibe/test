@@ -6,8 +6,9 @@ public class testeoRecurso{
         juan.setName("Juan Lopez");
         Cliente ines=new Cliente();
         ines.setName("Ines Garcia");
-        juan.start();
         ines.start();
+        juan.start();
+        
         Recurso.uso();
     }
 }
@@ -23,3 +24,9 @@ en Recurso: SoyInes Garcia*/
  Soy Ines Garcia
 en Recurso: SoyInes Garcia
 en Recurso: SoyJuan Lopez */
+
+/*Soy Juan Lopez
+en Recurso: Soy main
+ Soy Ines Garcia    
+en Recurso: Soy Juan Lopez
+en Recurso: Soy Ines Garcia */
