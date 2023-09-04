@@ -10,8 +10,7 @@ public class RunnableEjemplo implements Runnable {
         System.out.println(i+" "+ Thread.currentThread().getName());
     System.out.println("Termina thread " + Thread.currentThread().getName());
     };
-   }
-    
+      
     public static void main(String[] args){
        RunnableEjemplo mJ= new RunnableEjemplo();
        RunnableEjemplo jM= new RunnableEjemplo();
