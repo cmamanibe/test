@@ -1,4 +1,4 @@
-/*public class HiloAlfaBeta extends Thread{
+public class HiloAlfaBeta extends Thread{
     int cantidad;
     public HiloAlfaBeta(String nombre, int laCantidad){
         super(nombre);
@@ -11,4 +11,4 @@
           Thread.currentThread().getName());
       }
     }
-}*/
+}
