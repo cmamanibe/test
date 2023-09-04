@@ -6,10 +6,52 @@
     "configurations": [
         {
             "type": "java",
-            "name": "TestAlfaBeta",
+            "name": "UsoHilos",
             "request": "launch",
-            "mainClass": "TestAlfaBeta",
-            "projectName": "test_a019e85d"
+            "mainClass": "TP2Ejercicio3.UsoHilos",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "RunnableEjemplo",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio3.RunnableEjemplo",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "ThreadEjemplo",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio3.ThreadEjemplo",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Miejecucion",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio2.Miejecucion",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "TesteoHilos",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio2.TesteoHilos",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "PingPong",
+            "request": "launch",
+            "mainClass": "Hilo.PingPong",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "testeoRecurso",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio1.testeoRecurso",
+            "projectName": "test_f203a35a"
         },
         {
             "type": "java",
