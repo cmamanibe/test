@@ -24,5 +24,5 @@ public class RunnableEjemplo implements Runnable {
         
        System.out.println("Termina thread main");
     }
-   }
+   
    
