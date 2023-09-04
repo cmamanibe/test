@@ -58,3 +58,7 @@ System.out.println (" dato " + cuenta.obtenerValor());
 3271 veces PONG
  dato 5242
 1971 veces PING */
+/*Thread[main,5,main] chau-chau.adios
+ dato 0
+565 veces PING
+1417 veces PONG*/

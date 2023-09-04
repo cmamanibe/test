@@ -7,9 +7,12 @@ public class Empleado extends Persona {
     public String funcion;
     public String legajo;
     public int antiguedad;
-
-    public Empleado(long tax, String function, String leg, int antig){
-        super("",2, "",new Date(), 'f');
-
+    public Empleado(){}
+    public Empleado(long tax, String function, String leg, int antig,String nombre, long doc,String dir,Date f,char s){
+        super(nombre, doc, dir, f, s);
+        this.salario=tax;
+        this.funcion=function;
+        this.legajo=leg;
+        this.antiguedad=antig;
     }
 }

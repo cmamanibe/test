@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Contador",
+            "request": "launch",
+            "mainClass": "Hilo.Contador",
+            "projectName": "test_a019e85d"
+        },
+        {
+            "type": "java",
+            "name": "PingPong",
+            "request": "launch",
+            "mainClass": "Hilo.PingPong",
+            "projectName": "test_a019e85d"
+        },
+        {
+            "type": "java",
+            "name": "ThreadEjemplo",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio3.ThreadEjemplo",
+            "projectName": "test_a019e85d"
+        },
+        {
+            "type": "java",
+            "name": "RunnableEjemplo",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio3.RunnableEjemplo",
+            "projectName": "test_a019e85d"
+        },
+        {
+            "type": "java",
             "name": "UsoHilos",
             "request": "launch",
             "mainClass": "TP2Ejercicio3.UsoHilos",

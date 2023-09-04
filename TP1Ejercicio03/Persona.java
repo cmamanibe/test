@@ -7,13 +7,16 @@ public class Persona {
     public String direccion;
     public Date f_Nacimiento;
     public char sexo;
+    
+    public Persona(){
 
+    }
     public Persona(String name, long documento, String dire, Date f_Nac, char sex){
         this.nombreApellido=name;
         this.dni=documento;
         this.direccion=dire;
         this.f_Nacimiento=f_Nac;
-        if ((sex=='f')||(sex=='M')){
+        if ((sex=='f')||(sex=='m')){
         this.sexo=sex;
         }
     }
