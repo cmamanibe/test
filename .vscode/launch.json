@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CarreraRunnable",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio6.CarreraRunnable",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Carrera",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio6.Carrera",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Contador",
+            "request": "launch",
+            "mainClass": "Hilo.Contador",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
             "name": "Contador",
             "request": "launch",
             "mainClass": "Hilo.Contador",
