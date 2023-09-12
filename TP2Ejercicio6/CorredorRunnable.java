@@ -3,8 +3,8 @@ package TP2Ejercicio6;
 import java.util.Random;
 
 public class CorredorRunnable implements Runnable {
-        int distanciaRecorrida;
-    
+    public    int distanciaRecorrida;
+    public String nombre;    
     public void run(){
 
         Random ran=new Random();
@@ -18,12 +18,12 @@ public class CorredorRunnable implements Runnable {
 
     }
 }
-    public CorredorRunnable(){
-      
+    public CorredorRunnable(String name){
+        nombre=name;
         distanciaRecorrida=0;
     }
 
     public void status(){
-        System.out.println(Thread.currentThread().getName()+" recorrio: "+this.distanciaRecorrida);
+        System.out.println(this.nombre+" recorrio: "+this.distanciaRecorrida);
     }
 }

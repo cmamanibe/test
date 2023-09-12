@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Supermercado",
+            "request": "launch",
+            "mainClass": "TP2Ejercicio7.Supermercado",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
             "name": "CarreraRunnable",
             "request": "launch",
             "mainClass": "TP2Ejercicio6.CarreraRunnable",

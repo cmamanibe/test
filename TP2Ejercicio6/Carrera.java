@@ -14,7 +14,7 @@ public class Carrera {
         corredores[j].start();
     }
     try {
-        Thread.sleep(1000);
+        Thread.sleep(10000);
     } catch (Exception e) {
         // TODO: handle exception
     }       
