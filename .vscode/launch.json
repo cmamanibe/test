@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "TP3Ejercicio1.Main",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Barbero",
+            "request": "launch",
+            "mainClass": "Barbero_Dormilon.Barbero",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
             "name": "Supermercado",
             "request": "launch",
             "mainClass": "TP2Ejercicio7.Supermercado",
