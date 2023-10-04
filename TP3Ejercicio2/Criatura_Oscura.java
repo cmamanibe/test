@@ -12,14 +12,12 @@ public class Criatura_Oscura implements Runnable {
             this.e.drenar();
             if (this.e.nivel<=0){
                try {
-                Thread.sleep(1000);
+                
                     System.out.println("se dreno completamente");
-                    break;
+                    Thread.sleep(1000);
                } catch (Exception e) {
                
-               }
-                    
-                
+               } 
             }
         }
     }

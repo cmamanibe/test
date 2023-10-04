@@ -7,13 +7,13 @@ public class Energia {
         nivel=10;
     }
 
-    public void drenar(){
+    public synchronized void drenar(){
         System.out.println(Thread.currentThread().getName()+": Drena energia");
         nivel=nivel-3;
         System.out.println(nivel);
     }
 
-    public void revitalizar(){
+    public synchronized void revitalizar(){
         System.out.println(Thread.currentThread().getName()+": Revitaliza energia");
         nivel=nivel+3;
         System.out.println(nivel);

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Sistema",
+            "request": "launch",
+            "mainClass": "TP3Ejercicio4.Sistema",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Visitante",
+            "request": "launch",
+            "mainClass": "TP3Ejercicio4.Visitante",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "TP3Ejercicio3.Main",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "TP3Ejercicio2.Main",
