@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "TP3Ejercicio6.Main",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
+            "name": "Simular",
+            "request": "launch",
+            "mainClass": "TP3Ejercicio5.Simular",
+            "projectName": "test_f203a35a"
+        },
+        {
+            "type": "java",
             "name": "Sistema",
             "request": "launch",
             "mainClass": "TP3Ejercicio4.Sistema",
