@@ -15,7 +15,7 @@ public class Main {
       Thread[] t=new Thread[3];
       
       for (int j = 0; j < 2; j++) {
-        s[j]=new Sumador();
+        s[j]=new Sumador(datos);
         t[j]=new Thread(s[j],"sumador_"+j);
         t[j].start();
         }
