@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Impresora",
+            "request": "launch",
+            "mainClass": "TP3Ejercicio7.Impresora",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "TP3Ejercicio6.Main",
