@@ -4,7 +4,7 @@ public class Dato {
     private int valor;
 
 void contar(){
-       valor = ++valor;
+       valor +=valor;
 }
 
 int obtenerValor(){

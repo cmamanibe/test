@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SynchronizedCounter",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.SynchronizedCounter",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
+            "name": "Semaforo",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Ejercicio2.Semaforo",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
+            "name": "Counter",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Counter",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "Impresora",
             "request": "launch",
             "mainClass": "TP3Ejercicio7.Impresora",

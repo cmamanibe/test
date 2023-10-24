@@ -1,10 +1,10 @@
 package TP1Excepciones;
 
-import java.lang.reflect.Array;
+//import java.lang.reflect.Array;
 import java.util.Random;
 
 public class PruebaExcep {
-
+/*
     private static boolean menor_edad(int year) throws RuntimeException{
         try {
             if (year>18) {
@@ -30,7 +30,7 @@ public class PruebaExcep {
             throw  e;
         }
     }
-
+*/
     private static int acceso_por_indice(int[] v, int j) throws ArrayIndexOutOfBoundsException {
         try {
             if((0<=j)&&(j<v.length)){//verifica que el indice este dentro del rango
