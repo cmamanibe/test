@@ -4,10 +4,11 @@ public class ImprimirLetra implements Runnable {
     private char c;
     private int cantidad;
     private Turnos turno;
-    public ImprimirLetra(char caracter, int cantVeces){
+    public ImprimirLetra(char caracter, int cantVeces,Turnos turn){
         c=caracter;
         cantidad=cantVeces;
-        turno=new Turnos(c);
+        turno=new Turnos();
+        turno=turn;
     }
     public synchronized void run(){
         while (true){
