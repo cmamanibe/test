@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Ejercicio3.Main",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
+            "name": "SynchronizedObjectCounter",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.SynchronizedObjectCounter",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "SynchronizedCounter",
             "request": "launch",
             "mainClass": "TP4.Ejercicio1.SynchronizedCounter",

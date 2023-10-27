@@ -9,6 +9,7 @@ public class SynchronizedCounter {
 public static void main(String[] args){
     SynchronizedCounter c=new SynchronizedCounter();
     c.increment();
+    System.out.println(c.value());
     c.decrement();
     System.out.println(c.value());
 }
