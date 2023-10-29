@@ -1,23 +1,19 @@
 package TP4.Ejercicio1.Ejercicio3;
 
 public class Procesos implements Runnable {
-    private int ordenEjecucion;
+    private Bandera ordenEjecucion;
     private int numeroOrden;
-    public Procesos(int orden, int bandera){
+    
+    public Procesos(int orden, Bandera bandera){
         numeroOrden=orden;
         ordenEjecucion=bandera;
     }
     public void run(){
         while (true) {
-            if (ordenEjecucion==numeroOrden)
-                synchronized((Object) ordenEjecucion){
+            if (ordenEjecucion.getBandera()==numeroOrden){
                 System.out.println("Se ejecuta P"+Thread.currentThread().getName());
-                if (ordenEjecucion==3){
-                    ordenEjecucion=1;
-                }else{
-                    ordenEjecucion++;
-                }
-            }
+                ordenEjecucion.cambiarBandera();
+        }
         }
 
     }
