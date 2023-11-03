@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Taxi",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Ejercicio6.Taxi",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
+            "name": "Centro",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Ejercicio5.Centro",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "Centro",
             "request": "launch",
             "mainClass": "TP4.Ejercicio1.ejercicio4.Centro",
