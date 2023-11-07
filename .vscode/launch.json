@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Confiteria",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Ejercicio7.Confiteria",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "Taxi",
             "request": "launch",
             "mainClass": "TP4.Ejercicio1.Ejercicio6.Taxi",

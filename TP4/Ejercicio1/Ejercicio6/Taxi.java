@@ -12,19 +12,20 @@ public class Taxi {
     String cyan="\033[36m"; 
     String white="\033[37m";
     String reset="\u001B[0m";
-    char usuarioImpresoraTipo;
+    
+    String paxName="";
 
     Semaphore taxiSemaforo=new Semaphore(0);
     Semaphore paxSemaforo=new Semaphore(0);
 
     public Taxi(){
-
+        
     }
     // METODOS DE TAXISTA ESPERAR PASAJERO Y DESCENDER PASAJERO
     public void esperarPax(){
         try {
             paxSemaforo.acquire();// Asciende un pasajero
-            System.out.println(green+ "Inicio viaje el "+Thread.currentThread().getName()+reset);
+            System.out.println(green+ "Inicio viaje el "+paxName+reset);
         } catch (Exception e) {
             // TODO: handle exception
         }        
@@ -32,7 +33,7 @@ public class Taxi {
     public void desciendePax(){
         try {
             taxiSemaforo.release();
-            System.out.println(red+" Finalizo viaje el "+Thread.currentThread().getName()+reset);
+            System.out.println(red+" Finalizo viaje el "+paxName+reset);
         } catch (Exception e) {
             // TODO: handle exception
         }
@@ -50,6 +51,7 @@ public class Taxi {
     public void esperarTaxi(){
         try {
             taxiSemaforo.acquire(); //OCUPA EL TAXI
+            paxName=Thread.currentThread().getName();
             System.out.println(blue+Thread.currentThread().getName()+" obtuvo taxi!! " +reset);
         } catch (Exception e) {
             // TODO: handle exception
