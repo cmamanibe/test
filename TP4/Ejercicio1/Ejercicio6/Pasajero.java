@@ -10,8 +10,8 @@ public class Pasajero implements Runnable {
 
     public void run(){
         while (true) {
-            taxi.subirPax();
-            taxi.bajarPax();
+            taxi.pedirTaxi();
+            taxi.esperarTaxi();
         }
     }
 }

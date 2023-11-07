@@ -3,27 +3,54 @@ package TP4.Ejercicio1.Ejercicio6;
 import java.util.concurrent.Semaphore;
 
 public class Taxi {
-    Semaphore taxiSem=new Semaphore(1);
-    Semaphore pax=new Semaphore(0);
+    String black="\033[30m"; 
+    String red="\033[31m"; 
+    String green="\033[32m"; 
+    String yellow="\033[33m"; 
+    String blue="\033[34m"; 
+    String purple="\033[35m"; 
+    String cyan="\033[36m"; 
+    String white="\033[37m";
+    String reset="\u001B[0m";
+    char usuarioImpresoraTipo;
+
+    Semaphore taxiSemaforo=new Semaphore(0);
+    Semaphore paxSemaforo=new Semaphore(0);
 
     public Taxi(){
 
     }
-    public void subirPax(){
+    // METODOS DE TAXISTA ESPERAR PASAJERO Y DESCENDER PASAJERO
+    public void esperarPax(){
         try {
-            taxiSem.acquire();
-            System.out.println("Inicio viaje "+Thread.currentThread().getName());
-            Thread.sleep(1000);
-            pax.release();
+            paxSemaforo.acquire();// Asciende un pasajero
+            System.out.println(green+ "Inicio viaje el "+Thread.currentThread().getName()+reset);
         } catch (Exception e) {
             // TODO: handle exception
         }        
     }
-    public void bajarPax(){
+    public void desciendePax(){
         try {
-            pax.acquire();
-            taxiSem.release();
-            System.out.println("Finalizo viaje"+Thread.currentThread().getName());
+            taxiSemaforo.release();
+            System.out.println(red+" Finalizo viaje el "+Thread.currentThread().getName()+reset);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+    }
+
+    //METODOS DE PASAJERO PEDIR TAXI Y ESPERAR TAXI
+    public void pedirTaxi(){
+        try {
+            paxSemaforo.release();//LIBERA PASAJEROS
+            System.out.println(yellow+"Solicita Taxi el "+ Thread.currentThread().getName()+reset);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+    }
+    public void esperarTaxi(){
+        try {
+            taxiSemaforo.acquire(); //OCUPA EL TAXI
+            System.out.println(blue+Thread.currentThread().getName()+" obtuvo taxi!! " +reset);
         } catch (Exception e) {
             // TODO: handle exception
         }
@@ -39,7 +66,7 @@ public class Taxi {
 
         for (int i = 0; i < p.length; i++) {
             p[i]=new Pasajero(t);
-            simula[i]=new Thread(p[i], "pasajero_"+i);
+            simula[i]=new Thread(p[i], "Pasajero_"+i);
             simula[i].start();
         }
         System.out.println("Inicia el taxista");

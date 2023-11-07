@@ -1,5 +1,6 @@
 package TP4.Ejercicio1.Ejercicio6;
 
+
 public class Taxista implements Runnable {
     Taxi auto;
     public Taxista(Taxi t){
@@ -7,7 +8,13 @@ public class Taxista implements Runnable {
     }
     public void run(){
         while(true){
-            auto.subirPax();
+            auto.esperarPax();
+            try {
+                Thread.sleep(5000);
+            } catch (Exception e) {
+                
+            }
+            auto.desciendePax();
         }
     }
 }
