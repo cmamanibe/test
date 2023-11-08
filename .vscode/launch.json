@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ControladorProd",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Ejercicio8.ControladorProd",
+            "projectName": "test_7c454123"
+        },
+        {
+            "type": "java",
+            "name": "Confiteria",
+            "request": "launch",
+            "mainClass": "TP4.Ejercicio1.Ejercicio7.Confiteria",
+            "projectName": "test_7c454123"
+        },
+        {
+            "type": "java",
             "name": "Confiteria",
             "request": "launch",
             "mainClass": "TP4.Ejercicio1.Ejercicio7.Confiteria",
