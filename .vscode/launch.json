@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HamsterMonitor",
+            "request": "launch",
+            "mainClass": "TP5.EjercicioHamster.HamsterMonitor",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "ControladorProd",
             "request": "launch",
             "mainClass": "TP4.Ejercicio1.Ejercicio8.ControladorProd",

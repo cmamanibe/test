@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "test",
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.dependency.packagePresentation": "hierarchical"
+	}
+}
