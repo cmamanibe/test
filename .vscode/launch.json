@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Parcial2023.Main",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
+            "name": "Tren",
+            "request": "launch",
+            "mainClass": "TP5.Ejercicio5.Tren",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "HamsterMonitor",
             "request": "launch",
             "mainClass": "TP5.EjercicioHamster.HamsterMonitor",
