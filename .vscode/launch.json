@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Generador",
+            "request": "launch",
+            "mainClass": "Parcial2023.Generador",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Parcial2023.Main",

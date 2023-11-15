@@ -13,12 +13,26 @@ public class Generador {
             listAtomo[i].start();
         }
     }
+    public int cantidadAgua(){
+        return ma.cantidadAgua();
+    }
+    public void vaciar(){
+        ma.vaciar();
+    }
 
     public static void main(String[] args) {
         Generador g=new Generador();
+        int cantidadRecipiente=1;
+        int maxRecipiente=10;
         int k=10;
-        for (int i = 0; i < k; i++) {
-            
+        int i=0;
+        while (cantidadRecipiente<maxRecipiente){
+            while (i < k) {
+            i=g.cantidadAgua();
+            }
+            g.vaciar();
+            cantidadRecipiente++;
+            System.out.println("se lleno "+cantidadRecipiente+" recipientes");
         }
     }
 }
