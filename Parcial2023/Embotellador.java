@@ -20,7 +20,7 @@ public class Embotellador implements Runnable{
     frc=fabrica;
     }
     public void run(){
-        System.out.println(blue+"------Inicia Embotellador _"+tipoEmb+" -----"+reset);
+        System.out.println(blue+"------Inicia Embotellador "+tipoEmb+" -----"+reset);
         while(true){
             this.preparaBotella();
             frc.colocarenCaja(tipoEmb);

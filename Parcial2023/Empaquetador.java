@@ -16,10 +16,19 @@ public class Empaquetador implements Runnable{
     }
     public void run(){
         System.out.println(yellow+"----- inicia Empaquetador----"+reset);
+        int i=0;
         while(true){
             frc.empaquetar();
             frc.reponerCaja();
             frc.guardaAlmacen();
+            i++;
+            try {
+                if (i==100) {
+                    Thread.sleep(10000);
+                }
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
         }
     }
 }
