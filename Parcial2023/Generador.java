@@ -23,16 +23,17 @@ public class Generador {
     public static void main(String[] args) {
         Generador g=new Generador();
         int cantidadRecipiente=1;
-        int maxRecipiente=10;
-        int k=10;
+        int maxRecipiente=5;
+        int k=5;
         int i=0;
         while (cantidadRecipiente<maxRecipiente){
             while (i < k) {
-            i=g.cantidadAgua();
+            g.ma.hacerAgua();
+            i++;
             }
             g.vaciar();
             cantidadRecipiente++;
-            System.out.println("se lleno "+cantidadRecipiente+" recipientes");
+            System.out.println("Se lleno "+cantidadRecipiente+" recipientes");
         }
     }
 }

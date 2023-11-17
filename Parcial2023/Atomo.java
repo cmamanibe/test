@@ -15,7 +15,6 @@ public class Atomo implements Runnable {
         return clase;
     }
     public void run(){
-       boolean salida=true;
         switch (clase) {
             case "Oxigeno":
                 ma.oListo();
@@ -25,13 +24,7 @@ public class Atomo implements Runnable {
                 ma.hListo();
                 break;
         }
-        while(salida){
-            try {
-                salida=ma.hacerAgua();//hacer agua
-            } catch (Exception e) {
-                // TODO: handle exception
-            }
-        }
+        System.out.println("Finalizo "+Thread.currentThread().getName());
     }
 }
 
