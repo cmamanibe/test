@@ -12,7 +12,12 @@ public class FabricaRC {
     String cyan="\033[36m"; 
     String white="\033[37m";
     String reset="\u001B[0m";
-
+    //-------------- CORRECION PARCIAL -----------------------
+    //Variables que DEBI AGREGAR   
+    public Semaphore mutexVino, mutexAgua;
+    public int cantCajaAgua,cantCajaVino;
+    //--------------------------------------------------------
+    
     public Semaphore semTransp,semCajaVino,semCajaAgua,semVino,semAgua;
     public int cantVino, cantAgua, cantCaja;
     public int maxVino, maxAgua, maxCaja;
@@ -26,6 +31,14 @@ public class FabricaRC {
         semCajaVino=new Semaphore(1);
         semVino=new Semaphore(maxVino);
         semAgua=new Semaphore(maxAgua);
+        
+        //-------------- CORRECION PARCIAL -----------------------
+        //Variables que DEBI AGREGAR   
+        mutexVino=new Semaphore(1);
+        mutexAgua=new Semaphore(1);
+        cantCajaAgua=maxAgua;
+        cantCajaVino=maxVino;
+        //--------------------------------------------------------
         cantAgua=0;
         cantVino=0;
     }
@@ -36,12 +49,20 @@ public class FabricaRC {
             case "Vino":
                     try {
                         semVino.acquire();
+                        //------------ CORRECCION 1
+                        mutexVino.acquire();
+                        cantCajaVino--;
+                        //-----------------------------
                         cantVino++;
+                        
                         if(cantVino==maxVino){
                             System.out.println(blue+" Se completo una caja de Vino"+reset);
                             semCajaVino.acquire();
                             cantVino=0;
                         }
+                        // ----------- CORRECCION 1
+                        mutexVino.release();
+                        // ------------------------
                     } catch (Exception e) {
                         // TODO: handle exception
                     }
@@ -51,12 +72,19 @@ public class FabricaRC {
             case "Agua":
                     try {
                         semAgua.acquire();
+                        // ----------- CORRECCION 1
+                        mutexAgua.acquire();
+                        cantCajaAgua--;
+                        //------------------------------
                         cantAgua++;
                         if(cantAgua==maxAgua){
                             System.out.println(blue+" Se completo una caja de Agua"+reset);
                             semCajaAgua.acquire();
                             cantAgua=0;
                         }
+                        // ----------- CORRECCION 1
+                        mutexAgua.release();
+                        //------------------------------
                     } catch (Exception e) {
                         // TODO: handle exception
                     }
@@ -65,17 +93,28 @@ public class FabricaRC {
     }
     //Metodos EMPAQUETADOR
     public void empaquetar(){
+        /*  ---------------- CORRECCION 2
         if(semCajaAgua.availablePermits()==0){cantCaja++;}
         if(semCajaVino.availablePermits()==0){cantCaja++;}
+        -------------------------------------------*/
+        if ((cantCajaAgua==0)||(cantCajaVino==0)){cantCaja++;}
+        
     }
     public void reponerCaja(){
-        if(semCajaAgua.availablePermits()==0){
+        // ------------------ CORRECCION 2
+        //if(semCajaAgua.availablePermits()==0){
+        if(cantCajaAgua==0){
+            cantCajaAgua=maxAgua;
             System.out.println(yellow+" ////// Empaquetador repone CAJA AGUA /////"+reset);
             semCajaAgua.release();
-            semAgua.release(maxAgua);}
-        if(semCajaVino.availablePermits()==0){
+            semAgua.release(maxAgua);
+        }
+        // ------------------ CORRECCION 2
+        //if(semCajaVino.availablePermits()==0){
+        if(cantCajaVino==0){
+            cantCajaVino=maxVino;
             System.out.println(yellow+" ////// Empaquetador repone CAJA VINO /////"+reset);
-            semCajaVino.release();;
+            semCajaVino.release();
             semVino.release(maxVino);
         }        
     }

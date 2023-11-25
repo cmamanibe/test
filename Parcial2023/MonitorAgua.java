@@ -25,7 +25,6 @@ public class MonitorAgua {
     public synchronized void hacerAgua(){
         try {
           if ((atomoO>0)&&(atomoH>2)){
-
                 cantAgua++;
                 this.notify();
                 System.out.println(green+"------ Se genero una molecula de agua, llevan " +this.cantAgua+reset);
@@ -46,9 +45,8 @@ public class MonitorAgua {
         atomoO++;
         System.out.println(blue+"Ingreso un Atomo de Oxigeno, existen "+atomoO+" atomos de Oxigeno"+reset);
         try {
-            while (atomoH<2){
             this.wait();
-            }
+                       
         } catch (Exception e) {
             // TODO: handle exception
         }

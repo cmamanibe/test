@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DelayQueueExample",
+            "request": "launch",
+            "mainClass": "DelayQueueExample",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
+            "name": "DelayQueueExample",
+            "request": "launch",
+            "mainClass": "BlockingQueue.DelayQueueExample",
+            "projectName": "test_d11538fd"
+        },
+        {
+            "type": "java",
             "name": "Generador",
             "request": "launch",
             "mainClass": "Parcial2023.Generador",
