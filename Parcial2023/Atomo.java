@@ -4,9 +4,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Atomo implements Runnable {
     private String clase;
-    private MonitorAgua ma;
+    private CerrojoAgua ma;
 
-    public Atomo(MonitorAgua monitor){
+    public Atomo(CerrojoAgua monitor){
         String[] tipoClase={"Oxigeno","Hidrogeno"};
         clase=tipoClase[ThreadLocalRandom.current().nextInt(0,2)];
         ma=monitor;

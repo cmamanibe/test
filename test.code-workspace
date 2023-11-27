@@ -3,6 +3,9 @@
 		{
 			"name": "test",
 			"path": "."
+		},
+		{
+			"path": "../ProgramacionConcurrente"
 		}
 	],
 	"settings": {

@@ -1,6 +1,10 @@
 package Parcial2023;
 
-public class MonitorAgua {
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class CerrojoAgua {
 
     String black="\033[30m"; 
     String red="\033[31m"; 
@@ -12,14 +16,17 @@ public class MonitorAgua {
     String white="\033[37m";
     String reset="\u001B[0m";
 
-    private int atomoO;
-    private int atomoH;
-    private int cantAgua;
+    private int atomoO,atomoH, cantAgua;
+    private final Lock cerrojo;
+    private final Condition oxigenoOK, hidrogenoOK;
     
-    public MonitorAgua(){
+    public CerrojoAgua(){
         atomoH=0;
         atomoO=0;
         cantAgua=0;
+        this.cerrojo=new ReentrantLock(true);
+        oxigenoOK=cerrojo.newCondition();
+        hidrogenoOK=cerrojo.newCondition();
     }
 
     public synchronized void hacerAgua(){
@@ -42,22 +49,35 @@ public class MonitorAgua {
         System.out.println(red+"++++++ Se vacio +++++"+reset);
     }
     public synchronized void oListo(){
+        cerrojo.lock();
         atomoO++;
         System.out.println(blue+"Ingreso un Atomo de Oxigeno, existen "+atomoO+" atomos de Oxigeno"+reset);
         try {
-            this.wait();
-                       
+            while(atomoH<2){
+                oxigenoOK.await();
+            }
+            atomoO--;
+            hidrogenoOK.signalAll();   
         } catch (Exception e) {
-            // TODO: handle exception
+    
+        }finally{
+            cerrojo.unlock();
         }
     }
     public synchronized void hListo(){
+        cerrojo.lock();
         atomoH++;
         System.out.println(yellow+"Ingreso un Atomo de Hidrogeno, existen "+atomoH+" atomos de Hidrogeno"+reset);
         try {
-            this.wait();
+            while (atomoO<1) {
+                hidrogenoOK.await();
+            }
+            atomoH--;
+            oxigenoOK.signal();
         } catch (Exception e) {
             // TODO: handle exception
+        }finally{
+            cerrojo.unlock();
         }
     }
 }

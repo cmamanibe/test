@@ -2,11 +2,11 @@ package Parcial2023;
 
 public class Generador {
     public Atomo[] atom=new Atomo[100];
-    public MonitorAgua ma;
+    public CerrojoAgua ma;
 
     public Generador(){
         Thread[] listAtomo=new Thread[100];
-        ma=new MonitorAgua();
+        ma=new CerrojoAgua();
         for (int i = 0; i < listAtomo.length; i++) {
             atom[i]=new Atomo(ma);
             listAtomo[i]=new Thread(atom[i],"Atomo_"+atom[i].tipoAtomo()+"_"+i);
